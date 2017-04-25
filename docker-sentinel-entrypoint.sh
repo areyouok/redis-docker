@@ -33,9 +33,9 @@ gosu redis redis-server --dir /data/redis3 --port 6381 --slaveof 127.0.0.1 6379 
 waitStart 6381
 
 
-redis-sentinel /etc/sentinel1.conf &
-redis-sentinel /etc/sentinel2.conf &
-redis-sentinel /etc/sentinel3.conf &
+redis-sentinel /etc/sentinel1.conf > /var/log/redis_sentinel1 2>&1 &
+redis-sentinel /etc/sentinel2.conf > /var/log/redis_sentinel2 2>&1 &
+redis-sentinel /etc/sentinel3.conf > /var/log/redis_sentinel3 2>&1 &
 
-tail -f /var/log/redis_6379 /var/log/redis_6380 /var/log/redis_6381
+tail -f /var/log/redis_6379 /var/log/redis_6380 /var/log/redis_6381 /var/log/redis_sentinel1 /var/log/redis_sentinel2 /var/log/redis_sentinel3
 
