@@ -7,10 +7,4 @@ COPY sentinel3.conf /etc/sentinel3.conf
 RUN chmod +x /usr/local/bin/docker-sentinel-entrypoint.sh
 ENTRYPOINT ["docker-sentinel-entrypoint.sh"]
 
-EXPOSE 6379
-EXPOSE 6380
-EXPOSE 6381
-
-EXPOSE 26379
-EXPOSE 26380
-EXPOSE 26381
+EXPOSE 6379 6380 6381 26379 26380 26381
