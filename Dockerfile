@@ -1,5 +1,7 @@
 FROM redis:3
 
+MAINTAINER huangli <areyouok@gmail.com>
+
 COPY docker-sentinel-entrypoint.sh /usr/local/bin/
 COPY sentinel1.conf /etc/sentinel1.conf
 COPY sentinel2.conf /etc/sentinel2.conf
