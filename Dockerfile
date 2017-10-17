@@ -1,4 +1,4 @@
-FROM redis:3
+FROM redis:4
 
 MAINTAINER huangli <areyouok@gmail.com>
 
